@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🚀 DevOps Dashboard</h1>
+
+        <div class="card">
+
+            <p><b>Hostname:</b> <span id="hostname">-</span></p>
+
+            <p><b>Platform:</b> <span id="platform">-</span></p>
+
+            <p><b>Architecture:</b> <span id="arch">-</span></p>
+
+            <p><b>Uptime:</b> <span id="uptime">-</span></p>
+
+            <p><b>Total Memory:</b> <span id="memory">-</span></p>
+
+        </div>
+
+        <button onclick="loadInfo()">
+            Get Server Info
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "server-info-backend",
+  "version": "1.0.0",
+  "description": "DevOps Server Information Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Chinu",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
