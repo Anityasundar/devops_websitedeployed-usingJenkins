@@ -1,53 +1,151 @@
+/* RESET */
 body {
-
-    margin: 0;
-    font-family: Arial, sans-serif;
-
-    background: #0f172a;
-
-    color: white;
-
-    text-align: center;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
 }
 
-.container {
-
-    margin-top: 80px;
+/* ANIMATED BACKGROUND */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.card {
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
 
-    width: 400px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
 
-    margin: auto;
-
-    padding: 20px;
-
-    background: #1e293b;
-
-    border-radius: 10px;
-
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
 }
 
-p {
-
-    text-align: left;
-
-    padding: 8px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffd5;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffd5;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #d1d1d1;
+}
+
+/* BUTTON */
 button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  border: none;
+  background: #00ffd5;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    margin-top: 20px;
+button:hover {
+  transform: scale(1.05);
+}
 
-    padding: 12px 25px;
+/* MAIN CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
 
-    border: none;
+/* SERVER INFO CARD */
+.card {
+  width: 500px;
 
-    border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
 
-    cursor: pointer;
+  padding: 30px;
+  border-radius: 20px;
 
-    font-size: 16px;
+  box-shadow: 0 0 20px rgba(0,255,213,0.2);
+}
+
+.card h2 {
+  text-align: center;
+  color: #00ffd5;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 250px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0,255,213,0.4);
+}
+
+.service-card h3 {
+  color: #00ffd5;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+
+  background: rgba(255,255,255,0.08);
 }

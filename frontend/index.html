@@ -1,16 +1,40 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html>
 <head>
     <title>DevOps Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🚀 DevOps Dashboard</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Monitor Your Server in Real Time</h1>
+        <p>Docker | Jenkins | Kubernetes | Linux | AWS</p>
+
+        <button onclick="loadInfo()">
+            Get Server Info
+        </button>
+    </section>
+
+    <!-- Server Info Card -->
     <div class="container">
 
-        <h1>🚀 DevOps Dashboard</h1>
-
         <div class="card">
+
+            <h2>🖥 Server Information</h2>
 
             <p><b>Hostname:</b> <span id="hostname">-</span></p>
 
@@ -24,11 +48,32 @@
 
         </div>
 
-        <button onclick="loadInfo()">
-            Get Server Info
-        </button>
-
     </div>
+
+    <!-- DevOps Services -->
+    <section class="services">
+
+        <div class="service-card">
+            <h3>🐳 Docker</h3>
+            <p>Containerize applications and deploy anywhere.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>⚙ Jenkins</h3>
+            <p>Automate build, test and deployment pipelines.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>☸ Kubernetes</h3>
+            <p>Scale and manage containerized applications.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 DevOps Dashboard | Powered by Node.js & Docker</p>
+    </footer>
 
     <script src="script.js"></script>
 

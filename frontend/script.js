@@ -1,35 +1,21 @@
 async function loadInfo() {
 
-    const response =
-        await fetch(
-            "http://localhost:3000/server-info"
-        );
+    try {
 
-    const data =
-        await response.json();
+        const response = await fetch('/server-info');
 
-    document.getElementById(
-        "hostname"
-    ).innerText =
-        data.hostname;
+        const data = await response.json();
 
-    document.getElementById(
-        "platform"
-    ).innerText =
-        data.platform;
+        document.getElementById('hostname').innerText = data.hostname;
+        document.getElementById('platform').innerText = data.platform;
+        document.getElementById('arch').innerText = data.architecture;
+        document.getElementById('uptime').innerText = data.uptime;
+        document.getElementById('memory').innerText = data.totalMemory;
 
-    document.getElementById(
-        "arch"
-    ).innerText =
-        data.architecture;
+    } catch (error) {
 
-    document.getElementById(
-        "uptime"
-    ).innerText =
-        data.uptime;
+        alert("Unable to fetch server information");
 
-    document.getElementById(
-        "memory"
-    ).innerText =
-        data.totalMemory;
+        console.error(error);
+    }
 }
