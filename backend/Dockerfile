@@ -5,7 +5,7 @@ WORKDIR /app
 # copy package files correctly
 COPY backend/package*.json ./
 
-RUN npm install
+RUN npm install --production
 
 # copy backend code
 COPY backend/ ./
