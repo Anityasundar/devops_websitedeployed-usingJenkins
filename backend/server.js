@@ -1,6 +1,7 @@
 const express = require("express");
 const os = require("os");
 const path = require("path");
+const si = require("systeminformation");
 
 const app = express();
 const PORT = 3000;
@@ -14,7 +15,9 @@ app.get("/", (req, res) => {
 });
 
 // Server information API
-app.get("/server-info", (req, res) => {
+app.get("/server-info", async (req, res) => {
+
+    const cpu = await si.currentLoad();
 
     res.json({
         hostname: os.hostname(),
@@ -22,7 +25,9 @@ app.get("/server-info", (req, res) => {
         architecture: os.arch(),
         uptime: Math.floor(os.uptime() / 3600) + " Hours",
         totalMemory:
-            Math.round(os.totalmem() / (1024 * 1024 * 1024)) + " GB"
+            Math.round(os.totalmem() / (1024 * 1024 * 1024)) + " GB",
+
+        cpuUsage: cpu.currentLoad.toFixed(2) + "%"
     });
 
 });
